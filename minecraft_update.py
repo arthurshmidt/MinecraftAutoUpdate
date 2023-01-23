@@ -12,16 +12,17 @@ URL = "https://www.minecraft.net/en-us/download/server/bedrock"
 ALLOW = "/home/minecraft/server/bedrock/allowlist.json"
 WORLDS = "/home/minecraft/server/bedrock/worlds"
 PROPERTIES = "/home/minecraft/server/bedrock/server.properties"
-PROG = "/home/minecraft/server/bedrock/server_releases/bedrock-server-"
 
 def backup(version):
-    os.system("tar -zcvpf /home/minecraft/server/bedrock/backups/backup-bedrock-"+version+".tar.gz "+ALLOW+" "+WORLDS+" "+PROPERTIES+" "+PROG+version+".zip")
+    os.system("tar -zcvpf /home/minecraft/server/bedrock/backups/backup-bedrock-"+version+".tar.gz "+ALLOW+" "+WORLDS+" "+PROPERTIES)
 
 def cleanup():
     os.system("rm -rf /home/minecraft/server/bedrock/temp/*")
     os.system("cp -rf /home/minecraft/server/bedrock/latest_release/allowlist.json /home/minecraft/server/bedrock/temp")
     os.system("cp -rf /home/minecraft/server/bedrock/latest_release/server.properties /home/minecraft/server/bedrock/temp")
-    os.system("cp -rf /home/minedraft/server/bedrock/latest_release/worlds /home/minecrat/server/bedrock/temp")
+    os.system("cp -rf /home/minecraft/server/bedrock/latest_release/worlds /home/minecraft/server/bedrock/temp")
+    _ = input("Enter to Delete latest_release")
+    os.system("rm -rf /home/minecraft/server/bedrock/latest_release/*")
 
 if __name__ == "__main__":
     print("Backing up version: "+sys.argv[1]+" to "+sys.argv[2])
