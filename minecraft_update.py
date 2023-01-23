@@ -20,9 +20,11 @@ def backup(version):
 def cleanup():
     os.system("rm -rf /home/minecraft/server/bedrock/temp/*")
     os.system("cp -rf /home/minecraft/server/bedrock/latest_release/allowlist.json /home/minecraft/server/bedrock/temp")
+    os.system("cp -rf /home/minecraft/server/bedrock/latest_release/server.properties /home/minecraft/server/bedrock/temp")
+    os.system("cp -rf /home/minedraft/server/bedrock/latest_release/worlds /home/minecrat/server/bedrock/temp")
 
 if __name__ == "__main__":
-    print("Backing up version: "+sys.argv[1]+" to "sys.argv[2])
+    print("Backing up version: "+sys.argv[1]+" to "+sys.argv[2])
 #    backup(sys.argv[1])
     cleanup()
 #    os.system("tar -zcvpf backup-"+sys.argv[1]+".tar.bz2 README.md") 
