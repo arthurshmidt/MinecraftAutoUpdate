@@ -12,7 +12,7 @@ URL = "https://www.minecraft.net/en-us/download/server/bedrock"
 ALLOW = "/home/minecraft/server/bedrock-edition/allowlist.json"
 WORLDS = "/home/minecraft/server/bedrock-edition/worlds"
 PROPERTIES = "/home/minecraft/server/bedrock-edition/server.properties"
-PROG = "/home/minecraft/server/bedrock-edition/bedrock-"
+PROG = "/home/minecraft/server/bedrock-edition/bedrock_server-"
 
 if __name__ == "__main__":
     print("Backing up version: "+sys.argv[1])
