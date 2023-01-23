@@ -4,7 +4,7 @@ import sys
 
 import logging
 import requests
-import scrapy
+# import scrapy
 from bs4 import BeautifulSoup
 
 # Globals
