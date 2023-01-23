@@ -19,7 +19,7 @@ def backup(version):
 
 def cleanup():
     os.system("rm -rf /home/minecraft/server/bedrock/temp/*")
-    os.system("cp -rf /home/minecraft/server/bedrock/latest_release/allowlist /home/minecraft/server/bedrock/temp")
+    os.system("cp -rf /home/minecraft/server/bedrock/latest_release/allowlist.json /home/minecraft/server/bedrock/temp")
 
 if __name__ == "__main__":
     print("Backing up version: "+sys.argv[1]+" to "sys.argv[2])
