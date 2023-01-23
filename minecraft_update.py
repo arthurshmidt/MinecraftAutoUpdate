@@ -24,7 +24,11 @@ def cleanup():
     _ = input("Enter to Delete latest_release")
     os.system("rm -rf /home/minecraft/server/bedrock/latest_release/*")
 
+def install(version2):
+    os.system("unzip /home/minecraft/server/bedrock/server_releases/bedrock-server-"+version2+".zip -d /home/minecraft/server/bedrock/latest_release/")
+
 if __name__ == "__main__":
     print("Backing up version: "+sys.argv[1]+" to "+sys.argv[2])
-    backup(sys.argv[1])
-    cleanup()
+#    backup(sys.argv[1])
+#    cleanup()
+    install(sys.argv[2])
