@@ -26,6 +26,5 @@ def cleanup():
 
 if __name__ == "__main__":
     print("Backing up version: "+sys.argv[1]+" to "+sys.argv[2])
-#    backup(sys.argv[1])
+    backup(sys.argv[1])
     cleanup()
-#    os.system("tar -zcvpf backup-"+sys.argv[1]+".tar.bz2 README.md") 
