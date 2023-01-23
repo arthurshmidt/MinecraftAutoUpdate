@@ -11,11 +11,13 @@ from bs4 import BeautifulSoup
 URL = "https://www.minecraft.net/en-us/download/server/bedrock"
 ALLOW = "/home/minecraft/server/bedrock/latest_release/allowlist.json"
 WORLDS = "/home/minecraft/server/bedrock/latest_release/worlds"
+LATEST = "/home/minecraft/server/bedrock/latest_release/"
 PROPERTIES = "/home/minecraft/server/bedrock/latest_release/server.properties"
 
 def backup(version):
     print("Backing up latest version")
-    os.system("tar -zcvpf /home/minecraft/server/bedrock/backups/backup-bedrock-"+version+".tar.gz "+ALLOW+" "+WORLDS+" "+PROPERTIES)
+#    os.system("tar -zcvpf /home/minecraft/server/bedrock/backups/backup-bedrock-"+version+".tar.gz "+ALLOW+" "+WORLDS+" "+PROPERTIES)
+    os.system("tar -zcvpf /home/minecraft/server/bedrock/backups/backup-bedrock-"+version+".tar.gz "+LATEST)
 
 def cleanup():
     print("Cleaning up")
