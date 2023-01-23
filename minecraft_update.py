@@ -9,9 +9,9 @@ from bs4 import BeautifulSoup
 
 # Globals
 URL = "https://www.minecraft.net/en-us/download/server/bedrock"
-ALLOW = "/home/minecraft/server/bedrock/allowlist.json"
-WORLDS = "/home/minecraft/server/bedrock/worlds"
-PROPERTIES = "/home/minecraft/server/bedrock/server.properties"
+ALLOW = "/home/minecraft/server/bedrock/latest_release/allowlist.json"
+WORLDS = "/home/minecraft/server/bedrock/latest_release/worlds"
+PROPERTIES = "/home/minecraft/server/bedrock/latest_release/server.properties"
 
 def backup(version):
     os.system("tar -zcvpf /home/minecraft/server/bedrock/backups/backup-bedrock-"+version+".tar.gz "+ALLOW+" "+WORLDS+" "+PROPERTIES)
